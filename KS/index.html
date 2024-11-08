@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Impact Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-right: 2px solid #ddd;
+        }
+        .main-content {
+            width: 80%;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .chart-container, .result-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .legend {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+        }
+        .legend div span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+        .renewable-energy {
+            background-color: #1f77b4; /* Light blue */
+        }
+        .energy-consumption {
+            background-color: #0070c0; /* Blue */
+        }
+        .co2-emissions {
+            background-color: #ff4c4c; /* Red */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>User Inputs</h2>
+        <div class="input-group">
+            <label for="year">Select Year</label><br>
+            <select id="year" style="width: 100%; padding: 8px;">
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <!-- Add more years as needed -->
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="country">Select Country</label><br>
+            <select id="country" style="width: 100%; padding: 8px;">
+                <option>USA</option>
+                <option>India</option>
+                <option>Germany</option>
+                <!-- Add more countries as needed -->
+            </select>
+        </div>
+        <button class="btn">Predict CO2 Emissions</button>
+        <button class="btn">View Temperature Anomalies</button>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Climate Impact Predictor</h1>
+            <p>Predict CO2 emissions and explore future climate scenarios</p>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div></span>Renewable energy</div>
+            <div></span>Energy consumption</div>
+            <div></span>CO2 emissions</div>
+        </div>
+
+        <div class="result-card">
+            <h3>Prediction Results</h3>
+            <p>Renewable Energy: <strong>[Value] units</strong></p>
+            <p>Energy Consumption: <strong>[Value] units</strong></p>
+            <p>CO2 Emissions: <strong>[Value] units</strong></p>
+        </div>
+
+        <div class="chart-container">
+            <h3>CO2 Emission Trends</h3>
+            <p>we can put the line chart goes here...</p>
+        </div>
+        <div class="chart-container">
+            <h3>Feature Importance</h3>
+            <p>we can put the bar chart here...</p>
+        </div>
+    </div>
+</body>
+</html>
