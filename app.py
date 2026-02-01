@@ -21,7 +21,6 @@ st.markdown("""
 def load_data():
     # Adjust the file path as needed
     data = pd.read_csv('data/energy.csv')
-    # Ensure correct data types
     data['Year'] = data['Year'].astype(int)
     data['Energy Consumption'] = pd.to_numeric(data['Energy Consumption'], errors='coerce')
     data['CO2 Emission'] = pd.to_numeric(data['CO2 Emission'], errors='coerce')
