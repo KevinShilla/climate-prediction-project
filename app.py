@@ -28,5 +28,3 @@ def load_data():
     return data
 
 data = load_data()
-
-# Rest of your code...
