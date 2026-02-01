@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(layout="wide")
 
-# Inject CSS to style buttons as green
 st.markdown("""
     <style>
     .stButton > button {
